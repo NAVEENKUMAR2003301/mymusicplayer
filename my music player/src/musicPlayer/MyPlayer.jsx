@@ -5,6 +5,7 @@ const MyPlayer = () => {
   const [mp, setMp] = useState("");
   const [query, setQuery] = useState("");
   const audioRef = useRef(null);
+  const[count,setCount]=useState(0)
   const [searched, setSearched] = useState(false);
 
   function search() {
@@ -28,10 +29,12 @@ const MyPlayer = () => {
           }
         }, 0);
       });
+      setCount((count)=>count+1)
   }
 
   return (
     <div>
+      <p>search song - {count}</p>
       <input
         type="text"
         value={query}
