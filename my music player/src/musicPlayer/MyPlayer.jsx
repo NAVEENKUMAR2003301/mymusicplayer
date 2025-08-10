@@ -32,6 +32,7 @@ const MyPlayer = () => {
 
   return (
     <div >
+        
       <input
         type="text"
         value={query}
