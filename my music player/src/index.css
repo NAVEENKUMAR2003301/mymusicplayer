@@ -158,7 +158,9 @@ input::placeholder {
 input:focus {
     box-shadow: 0px 0px 10px rgba(0,255,127,0.6);
 }
-
+.close{
+    display: none;
+}
 button {
     width: 30%;
     height: 45px;

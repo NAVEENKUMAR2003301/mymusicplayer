@@ -19,7 +19,7 @@ const MyPlayer = () => {
     )
       .then((res) => res.json())
       .then((musicData) => {
-        let songData = musicData.data.results[calc];
+        let songData = musicData.data.results[0];
         let song = songData.downloadUrl[3].url;
         let image = songData.image[2].url;
         setImg(image);
