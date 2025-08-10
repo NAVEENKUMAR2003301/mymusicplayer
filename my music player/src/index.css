@@ -151,6 +151,7 @@ input {
     background: rgba(255,255,255,0.1);
     color: #fff;
     transition: 0.3s;
+    margin-bottom: 5px;
 }
 input::placeholder {
     color: rgba(255,255,255,0.6);

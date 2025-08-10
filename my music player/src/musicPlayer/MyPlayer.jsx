@@ -9,7 +9,7 @@ const MyPlayer = () => {
   const[count,setCount]=useState(0)
   const [searched, setSearched] = useState(false);
   let [calc,setCalc]=useState(0)
-
+  let song = []
   function search() {
     if (!query.trim()) return;
     setSearched(true);
