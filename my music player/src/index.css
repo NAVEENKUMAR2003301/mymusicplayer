@@ -8,6 +8,7 @@ body{
     align-items: center;
 
     background-color: black;
+    overflow: hidden;
 }
 .close{
     display: none;
@@ -33,6 +34,7 @@ input{
     border-bottom-left-radius: 999px;
     padding-left: 20px;
     outline: none;
+    margin-bottom: 50px;
 }
 
 input:hover{
@@ -65,5 +67,34 @@ button:focus{
     }
     to{
         transform: rotate(360deg);
+    }
+}
+
+@media(max-width:450px){
+    body{
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        width: 150px;
+        margin-left: 00px;
+    }
+    button{
+        width: 80px;
+    }
+    button:focus{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+    .imge{
+        width: 300px;
+        margin-left: 00px;
+    }
+    audio{
+        width: 300px;
+        margin-left: 00px;
     }
 }
