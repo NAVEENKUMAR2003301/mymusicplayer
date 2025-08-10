@@ -41,7 +41,7 @@ const MyPlayer = () => {
       <button onClick={search}>Search</button>
       <img src={img} alt="cover" className={searched ? "imge" : "close"} />
       {mp && (
-        <audio ref={audioRef} autoPlay controls>
+        <audio ref={audioRef} muted autoPlay controls>
           <source src={mp} type="audio/mpeg" />
         </audio>
       )}
