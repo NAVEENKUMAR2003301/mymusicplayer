@@ -8,7 +8,8 @@ const MyPlayer = () => {
   const audioRef = useRef(null);
   const[count,setCount]=useState(0)
   const [searched, setSearched] = useState(false);
-  let [calc,setCalc]=useState(0)
+  let [albumm,setAlbumm]=useState("")
+
   let song = []
   function search() {
     if (!query.trim()) return;
@@ -20,14 +21,18 @@ const MyPlayer = () => {
       .then((res) => res.json())
       .then((musicData) => {
         let songData = musicData.data.results[0];
+        console.log(songData);
+        let album = songData.album.name
         let song = songData.downloadUrl[3].url;
         let image = songData.image[2].url;
+        console.log(album);
+        
+        setAlbumm(album)
         setImg(image);
         setMp(song);
         setTimeout(() => {
           if (audioRef.current) {
             audioRef.current.load();
-            audioRef.current.play();
           }
         }, 0);
       });
@@ -52,9 +57,10 @@ const MyPlayer = () => {
         </audio>
       )}
       <br />
-     
+      <marquee behavior="" direction="">
+        <p style={{color:"red"}}>{albumm}</p>
+      </marquee>
     </div>
- 
   );
 };
 
