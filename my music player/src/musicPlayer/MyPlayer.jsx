@@ -2,7 +2,7 @@ import React, { useState, useRef } from "react";
 
 const MyPlayer = () => {
   
-  const [img, setImg] = useState("");
+  const [img, setImg] = useState(0);
   const [mp, setMp] = useState("");
   const [query, setQuery] = useState("");
   const audioRef = useRef(null);
@@ -42,7 +42,8 @@ const MyPlayer = () => {
 
   return (
     <div className="container">
-      <p>search song - {count}</p>
+     
+       <p>search song - {count}</p>
       <input
         type="text"
         value={query}
@@ -50,7 +51,7 @@ const MyPlayer = () => {
         placeholder="search song..."
       />
       <button onClick={search}>Search</button>
-      <img src={img} alt="cover" className={searched ? "imge" : "close"} />
+      <img src={img} alt="" className={searched ? "imge" : "close"} />
       {mp && (
         <audio ref={audioRef} autoPlay controls>
           <source src={mp} type="audio/mpeg" />
